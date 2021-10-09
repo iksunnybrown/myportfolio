@@ -29,6 +29,7 @@ $(document).ready(function(){
           backSpeed: 60,
           loop:true
         });
+        
     // toggle menu bars
      $('.menu-btn').click(function(){
        $('.navbar .menu').toggleClass("active");

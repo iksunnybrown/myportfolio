@@ -11,6 +11,25 @@ html{
     scroll-behavior: smooth;
 }
 
+/* Variables */
+:root {
+    --font-family: "Poppins", Sans-Serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }
+  /* Variables end */
+  
+
 /* navbar styles */
 .max-width{
     max-width: 1300px;
@@ -235,6 +254,7 @@ section .title::after{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+    /* line-height: 21px; */
 }
 .about .about-content .right .text span{
    color: crimson;
@@ -389,6 +409,57 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 70%;
 }
+
+/* portfolio projects begins here */
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
+  
+  .project-pic {
+    width: 65%;
+    height: 60%;
+  }
+  
+  .projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .projects-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .project-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+  }
+  .project-container p {
+    padding: 0.4rem;
+  }
+  
+  .project-title {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-details {
+    margin-bottom: var(--bottom-margin);
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+/* portfolio projects ends here */
+
 /* teams section start here */
 .teams .title::after{
     content: "who's with me";
@@ -577,50 +648,19 @@ section .title::after{
 }
 
 /* sticky social icons ...................................................................*/
-#sticky-social-icon .float-sticky-bar>li{
-    background-color: #222;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 4px 5px;
-    width: 150px;
-    position: fixed;
-    z-index: 999;
-    transition: all 0.5s ease;
+.socials {
     display: flex;
-    justify-content: flex-end;
-    left: -105px;
-}
-#sticky-social-icon .fab{
-    font-size: 20px;
-    color: #fff;
-    padding: 10px 0 10px 10px;
-    width: 35px;
-    margin-left: 8px;
-}
-#sticky-social-icon .float-sticky-bar>li:hover{
-    left: 0;
-}
-#sticky-social-icon .float-sticky-bar>li>a{
-    color: #fff;
-    text-decoration: none;
-    line-height: 45px !important;
-    text-align: center;
-    vertical-align: top !important;
-}
-/* position each icon */
-#sticky-social-icon .position-fb{top: 160px;}
-#sticky-social-icon .position-tw{top: 212px;}
-#sticky-social-icon .position-in{top: 264px;}
-#sticky-social-icon .position-li{top: 316px;}
-#sticky-social-icon .position-yu{top: 364px;}
-/* sticky social icons end */
-
-/* background color social */
-.faicon-facebook:hover{background-color: #3b5998 !important;}
-.faicon-twitter:hover{background-color: #00ACEE !important;}
-.faicon-instagram:hover{background-color: #EA4C89 !important;}
-.faicon-linkedin:hover{background-color: #0E76A8 !important;}
-.faicon-youtube:hover{background-color: #C8232C !important;}
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 40%;
+    z-index: 999;
+  }
+  
+  .socicon {
+    width: 2rem;
+    height: 2rem;
+  }
 
 /* footer section start here */
 footer{
@@ -644,7 +684,7 @@ footer span a:hover{
 /* responsive styling start here */
 
 @media (max-width: 1300px) {
-    .home .max-width{
+    .homewrap .max-width{
         margin-left: 0px;
     }
         
@@ -699,11 +739,11 @@ footer span a:hover{
         font-size: 25px;
 
     }
-    .home .home-content .text-2{
+    .homewrap .home-content .text-2{
         font-size: 65px;
         
     }
-    .home .home-content .text-3{
+    .homewrap .home-content .text-3{
         font-size: 35px;
         
     }
@@ -731,21 +771,28 @@ footer span a:hover{
         padding: 0 23px;
         
     }
-    .home .home-content .text-2{
-        font-size: 50px;
+    .homewrap .home-content .text-2{
+        font-size: 40px;
         
     }
-    .home .home-content .text-3{
-        font-size: 32px;
+    .homewrap .home-content .text-3{
+        font-size: 25px;
         
     }
-    .home .home-content a{
+    .homewrap .home-content a{
         font-size: 23px;
         padding: 10px 30px;
     }
     .about .about-content .column{
         width: 50%;
     }
+    .projects-container {
+        flex-direction: column;
+      }
+    
+      .project-container {
+        width: 20.875rem;
+      }
     .services .serve-content .card,
     .skills .skills-content .column,
     .contact .contact-content .column{
@@ -753,17 +800,37 @@ footer span a:hover{
         margin-bottom: 25px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 470px) {
    
-    .home .home-content .text-2{
-        font-size: 45px;
+    .homewrap .home-content .text-2{
+        font-size: 38px;
         
     }
-    .home .home-content .text-3{
-        font-size: 27px;
+    .homewrap .home-content .text-3{
+        font-size: 25px;
         
     }
-    .home .home-content a{
+    .homewrap .home-content a{
         font-size: 20px;
     }
+    .project-container {
+        width: 17.875rem;
+      }
+}
+@media (max-width: 400px) {
+   
+    .homewrap .home-content .text-2{
+        font-size: 35px;
+        
+    }
+    .homewrap .home-content .text-3{
+        font-size: 25px;
+        
+    }
+    .homewrap .home-content a{
+        font-size: 20px;
+    }
+    .project-container {
+        width: 17.875rem;
+      }
 }
