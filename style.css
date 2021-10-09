@@ -772,11 +772,11 @@ footer span a:hover{
         
     }
     .homewrap .home-content .text-2{
-        font-size: 40px;
+        font-size: 50px;
         
     }
     .homewrap .home-content .text-3{
-        font-size: 25px;
+        font-size: 30px;
         
     }
     .homewrap .home-content a{
@@ -803,7 +803,7 @@ footer span a:hover{
 @media (max-width: 470px) {
    
     .homewrap .home-content .text-2{
-        font-size: 38px;
+        font-size: 40px;
         
     }
     .homewrap .home-content .text-3{
@@ -817,7 +817,7 @@ footer span a:hover{
         width: 17.875rem;
       }
 }
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
    
     .homewrap .home-content .text-2{
         font-size: 35px;
@@ -833,4 +833,4 @@ footer span a:hover{
     .project-container {
         width: 17.875rem;
       }
-}
+} */
